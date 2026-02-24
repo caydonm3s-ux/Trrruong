@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLB THPT Võ Nguyên Giáp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+.schedule{
+width:100%;
+border-collapse:collapse;
+margin:30px auto;
+background:#111;
+color:#00ff88;
+}
+
+.schedule th,
+.schedule td{
+border:2px solid #00ff88;   /* DÒNG KẺ RÕ */
+padding:12px;
+text-align:center;
+}
+
+.schedule th{
+background:#002b1a;
+font-weight:bold;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+color:#00ff88;
+overflow-x:hidden;
+}
+
+/* ===== BACKGROUND TECH GRID ===== */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,255,136,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,136,0.05) 1px, transparent 1px);
+background-size:40px 40px;
+z-index:-1;
+}
+
+/* ===== NAV ===== */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:25px;
+box-shadow:0 0 15px #00ff88;
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#00ff88;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
+text-shadow:0 0 10px #00ff88;
+}
+
+/* ===== HEADER ===== */
+
+header{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+header h1{
+font-size:36px;
+text-shadow:0 0 20px #00ff88;
+}
+
+header p{
+margin-top:15px;
+color:#66ffbb;
+}
+
+/* ===== SECTION ===== */
+
+.section{
+padding:120px 10%;
+scroll-margin-top:100px;
+}
+
+.club{
+background:#111;
+border:1px solid #00ff88;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,255,136,0.3);
+margin-bottom:60px;
+transition:0.3s;
+}
+
+.club:hover{
+transform:scale(1.02);
+box-shadow:0 0 35px #00ff88;
+}
+
+.club h2{
+margin-bottom:20px;
+text-shadow:0 0 10px #00ff88;
+}
+
+.info{
+line-height:1.7;
+color:#b6ffe0;
+}
+
+.club img{
+width:100%;
+margin-top:20px;
+border-radius:10px;
+border:1px solid #00ff88;
+}
+
+/* BUTTON */
+
+.register{
+text-align:center;
+margin:80px 0;
+}
+
+.register button{
+padding:15px 40px;
+background:#00ff88;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.register button:hover{
+background:white;
+color:#00ff88;
+box-shadow:0 0 20px #00ff88;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+border-top:1px solid #00ff88;
+color:#66ffbb;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#stem">STEM</a>
+<a href="#vanhoa">Văn hóa đọc</a>
+<a href="#songxanh">Sống xanh</a>
+<a href="#tienganh">Tiếng Anh</a>
+<a href="#thethao">Thể thao</a>
+<a href="#phapluat">Pháp luật</a>
+<a href="#vannhe">Văn nghệ</a>
+</nav>
+
+<header>
+<h1>CÂU LẠC BỘ TRƯỜNG THPT VÕ NGUYÊN GIÁP</h1>
+<p>Thiết kế phong cách công nghệ xanh</p>
+</header>
+<section class="section" id="stem">
+<div class="club">
+
+<h2>🚀 1.CLB STEM</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Khơi dậy niềm đam mê khoa học – công nghệ, phát triển tư duy sáng tạo và khả năng nghiên cứu thực tiễn.<br><br>
+
+<b>Tiêu chí:</b><br>
+Yêu thích khoa học – công nghệ, có tinh thần sáng tạo, chăm chỉ và sẵn sàng tham gia nghiên cứu, chế tạo mô hình.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Q3S7C618/images-3.jpg" alt="images (3)" border="0"></a>
+
+<br><br>
+
+<h3 style="margin-bottom:15px;">📝 Đăng ký tham gia</h3>
+
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+
+
+<section class="section" id="vanhoa">
+<div class="club">
+
+<h2>📚2. CLB Văn hóa đọc</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Lan tỏa tình yêu sách, phát triển tư duy và kỹ năng tự học.<br><br>
+
+<b>Tiêu chí:</b><br>
+Có niềm yêu thích đọc sách, tinh thần chia sẻ tri thức và thái độ nghiêm túc trong các buổi sinh hoạt.
+
+<a href="https://ibb.co/39cR9FfT"><img src="https://i.ibb.co/hJVYJdXg/Vanhoadoc1.jpg" alt="Vanhoadoc1" border="0"></a>
+
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+<section class="section" id="songxanh">
+<div class="club">
+
+<h2>🌿 3.CLB Sống xanh</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Nâng cao ý thức bảo vệ môi trường và phát triển bền vững.<br><br>
+
+<b>Tiêu chí:</b><br>
+Có ý thức bảo vệ môi trường, tích cực tham gia hoạt động cộng đồng và sẵn sàng lan tỏa lối sống xanh.
+
+<a href="https://ibb.co/S77Rxh5H"><img src="https://i.ibb.co/NnnZ38tf/IMG-1771676369991-1771676386392.jpg" alt="IMG-1771676369991-1771676386392" border="0"></a>
+
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+<section class="section" id="tienganh">
+<div class="club">
+
+<h2>🌍4. CLB Tiếng Anh</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Tạo môi trường giao tiếp tiếng Anh tự tin và chủ động.<br><br>
+
+<b>Tiêu chí:</b><br>
+Tự tin giao tiếp, có tinh thần học hỏi và mong muốn nâng cao kỹ năng nghe – nói – đọc – viết tiếng Anh.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/5hd4ck01/doc2.jpg" alt="doc2" border="0"></a>
+
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+<section class="section" id="thethao">
+<div class="club">
+
+<h2>🏆5. CLB Thể thao</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Rèn luyện thể chất và phát triển tinh thần đồng đội.<br><br>
+
+<b>Tiêu chí:</b><br>
+Có sức khỏe tốt, tinh thần đồng đội cao, kỷ luật và tích cực tham gia luyện tập thể thao.
+
+<img src="https://i.ibb.co/LXVcK5wn/thethao3.jpg">
+
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+<section class="section" id="phapluat">
+<div class="club">
+
+<h2>⚖️6. CLB Pháp luật</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Trang bị kiến thức pháp luật và nâng cao ý thức công dân.<br><br>
+
+<b>Tiêu chí:</b><br>
+Quan tâm đến kiến thức pháp luật, có khả năng lập luận, tranh biện và tinh thần trách nhiệm công dân.
+<img src="https://i.ibb.co/h1wpbfCH/IMG-1771685159612-1771685209124.jpg">
+
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+
+<section class="section" id="vannhe">
+<div class="club">
+
+<h2>🎤7. CLB Văn nghệ</h2>
+
+<div class="info">
+<b>Tôn chỉ:</b><br>
+Phát triển năng khiếu nghệ thuật và sáng tạo học đường.<br><br>
+
+<b>Tiêu chí:</b><br>
+Có năng khiếu hoặc đam mê nghệ thuật, tự tin biểu diễn và tích cực tham gia hoạt động văn nghệ của trường.
+
+<a href="https://ibb.co/b52qcX14"><img src="https://i.ibb.co/KxLRTW6t/Vannghe1.jpg" alt="Vannghe1" border="0"></a>
+<br><br>
+
+<h3>📝 Đăng ký tham gia</h3>
+<form class="stem-form">
+<input type="text" placeholder="Họ và tên" required>
+<input type="text" placeholder="Lớp" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<button type="submit">GỬI ĐĂNG KÝ</button>
+</form>
+
+</div>
+</section>
+<table class="schedule">
+<tr>
+<th>STT</th>
+<th>Tuần</th>
+<th>Câu lạc bộ</th>
+<th>Người phụ trách</th>
+</tr>
+<tr><td>1</td><td>1</td><td>CLB STEM</td><td>Phan Thị Điệp</td></tr>
+<tr><td>2</td><td>1</td><td>CLB Văn hóa đọc</td><td>Vũ Thị Lan Hương</td></tr>
+<tr><td>3</td><td>2</td><td>CLB Sống xanh</td><td>Nguyễn Thị Thúy Hằng</td></tr>
+<tr><td>4</td><td>2</td><td>CLB Pháp luật</td><td>Phạm Thị Tám</td></tr>
+<tr><td>5</td><td>3</td><td>CLB Văn nghệ</td><td>Nguyễn Thị Ly</td></tr>
+<tr><td>6</td><td>4</td><td>CLB Tiếng Anh</td><td>Nguyễn Thanh Nhã</td></tr>
+<tr><td>7</td><td>4</td><td>CLB Thể dục thể thao</td><td>Đỗ Tấn Khương</td></tr>
+</table>
+<footer>
+  THPT Võ Nguyên Giáp
+</footer>
+
+</body>
+</html>
